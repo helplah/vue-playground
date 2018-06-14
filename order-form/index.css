@@ -1,0 +1,23 @@
+body {
+	color: white;
+	height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center {
+	width: 50%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #61A1BC;
+	border-radius: 4px;
+
+}
+
+#app ul {
+	list-style-type: none;
+	padding-left: 0;
+}
