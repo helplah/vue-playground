@@ -1,8 +1,4 @@
-Vue.filter("currency", function(value) {
-  return "$" + value.toFixed(2);
-})
-
-const app = new Vue({
+new Vue({
   el: '#app',
   data: {
     // an array of objects
@@ -19,18 +15,23 @@ const app = new Vue({
         price: 250,
         active: false
       },
-      { text: "testing",
+      { text: "Training",
         price: 220,
         active: false
       }
     ],
-    methods: {
-      toggleActive: function(svc) {
-        svc.active = !svc.active;
-      },
-      total: function() {
-        if svc
-      }
+    total: 0
+  },
+  methods: {
+    toggleActive: function(svc) {
+      console.log(svc);
+      svc.active = !svc.active;
+      this.total += svc.price;
+    }
+  },
+  filters: {
+    currency: function(value) {
+      return "$" + value.toFixed(2);
     }
   }
 });

@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>testing</title>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+    <title>Order Form</title>
+		<script src="../vue.js"></script>
   </head>
   <body>
     <div class="center">
       <h1>Services</h1>
       <div id="app">
   			<ul>
-  				<li v-for="service in services" v-if="service.active">
+  				<li class="list" v-for="service in services" @click="toggleActive" :class="">
   					{{ service.text }} <span>{{ service.price | currency }}</span>
   				</li>
+          <div class="total">
+            Total:<span>{{ total | currency }}</span>
+          </div>
   			</ul>
-        <div class="total">
-          Total:<span>{{ total() | currency }}</span>
-        </div>
   		</div>
     </div>
 		<script src="index.js"></script>
