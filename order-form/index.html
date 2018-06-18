@@ -7,15 +7,16 @@
 		<script src="../vue.js"></script>
   </head>
   <body>
-    <div class="center">
+    <div class="center container">
       <h1>Services</h1>
       <div id="app">
   			<ul>
-  				<li class="list" v-for="service in services" @click="toggleActive" :class="">
+  				<li class="list" v-for="service in services" @click="toggleActive(service)" :class="{active: service.active}">
   					{{ service.text }} <span>{{ service.price | currency }}</span>
   				</li>
+          <!-- two ways - set total property in data and retrieve it OR create a total()-->
           <div class="total">
-            Total:<span>{{ total | currency }}</span>
+            Total:<span>{{ total() | currency }}</span>
           </div>
   			</ul>
   		</div>

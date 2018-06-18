@@ -22,6 +22,11 @@ body {
 	border-radius: 4px;
 }
 
+.center h1 {
+	font-size: 44px;
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
 #app {
 	display: flex;
 	align-items: center;
@@ -36,6 +41,7 @@ body {
 	width: var(--width);
 }
 
+/* bind to list */
 .active { /* green color */
 	background-color: #8EC16D !important;
 }
@@ -66,4 +72,28 @@ body {
 	margin-bottom: 25px;
 	font-size: var(--font-size);
 	font-weight: 700;
+}
+
+@media (min-width: 1440px) {
+	.center {
+		width: 35%;
+	}
+}
+
+@media (max-width: 1025px) {
+	.center {
+		width: 60%;
+	}
+}
+
+@media (max-width: 840px) {
+	.center {
+		width: 70%;
+	}
+}
+
+@media (max-width: 650px) {
+	.center {
+		width: 80%;
+	}
 }

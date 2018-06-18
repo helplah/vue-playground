@@ -5,7 +5,7 @@ new Vue({
     services: [
 			{ text: "Web Development",
         price: 300,
-        active: false
+        active: true
       },
       { text: "Design",
         price: 400,
@@ -19,14 +19,20 @@ new Vue({
         price: 220,
         active: false
       }
-    ],
-    total: 0
+    ]
   },
   methods: {
     toggleActive: function(svc) {
-      console.log(svc);
       svc.active = !svc.active;
-      this.total += svc.price;
+    },
+    total: function() {
+      let total = 0;
+      this.services.forEach(function(svc) {
+        if (svc.active) {
+          total += svc.price;
+        }  
+      })
+      return total;
     }
   },
   filters: {
