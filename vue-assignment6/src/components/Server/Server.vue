@@ -9,15 +9,8 @@
 
   export default {
     props: ['server'],
-    data: function() {
-      return {
-        displayStatus: false
-      };
-    },
     methods: {
       clickedServer() {
-        this.displayStatus = !this.displayStatus; 
-        //console.log(this.server);
         serverBus.$emit('toggleStatus', this.server);
       }
     }
