@@ -13,10 +13,3 @@
 
 <style>
 </style>
-
-
-<script>
-</script>
-
-<style>
-</style>
